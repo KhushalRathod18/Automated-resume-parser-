@@ -1,0 +1,7 @@
+DATABASE
+Saved Candidates
+← Upload resume
+{% for r in resumes %}{% else %}{% endfor %}
+Name	Email	Phone	Skills	Education
+{{r.name or "—"}}	{{r.email or "—"}}	{{r.phone or "—"}}	{{r.skills or "—"}}	{{r.education.replace('\n','; ') if r.education else "—"}}
+No resumes parsed yet.
