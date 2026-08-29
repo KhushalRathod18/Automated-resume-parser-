@@ -1,0 +1,16 @@
+PARSED SUCCESSFULLY
+Candidate Details
+{{filename}}
+
+Name{{data.name or "Not detected"}}
+Email{{data.email or "Not detected"}}
+Phone{{data.phone or "Not detected"}}
+Skills
+{% for s in data.skills %}{{s}}{% else %}No skills detected.{% endfor %}
+Education
+{% for e in data.education %}
+{{e}}
+{% else %}
+Not detected.
+{% endfor %}
+← Parse another resume
